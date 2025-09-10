@@ -1,0 +1,1 @@
+In this repository i am going to attach all the practice questions that i did in order to learn c++.I am starting c++ from scratch and I think it is going to be fun.Also, I am planning to start dsa in c++ too 
