@@ -1,0 +1,41 @@
+#include <iostream>
+#include <vector>
+#include <climits>
+using namespace std;
+
+int main() {
+    int n;
+    cout << "Enter the number of elements in an array: ";
+    cin >> n;
+
+    vector<int> arr(n);
+    cout << "Enter " << n << " elements: ";
+    for (int i = 0; i < n; i++) {
+        cin >> arr[i];
+    }
+
+    int First = INT_MIN, Second = INT_MIN;
+
+    for (int i = 0; i < n; i++) {
+        if (arr[i] > First) {
+            Second = First;
+            First = arr[i];
+        }
+        else if (arr[i] > Second && arr[i] != First) {
+            Second = arr[i];
+        }
+    }
+
+    if (Second == INT_MIN) {
+        cout << "There is no second largest element!" << endl;
+    } else {
+        cout << "The second largest element is: " << Second << endl;
+    }
+
+    return 0;
+}
+
+
+
+
+
